@@ -1,0 +1,2 @@
+# study_twipy
+Pythonを使ってTwitterAPIに接続し、タイムラインを取得する練習
