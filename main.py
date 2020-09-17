@@ -16,8 +16,8 @@ def TwiSearch(key_word,directory_pass):
 
     tweet_list =[]
 
-    for tweet in tweepy.Cursor(api.search, key_word=key_word, count=100,tweet_mode='extended').items():
-        tweet_list.append(tweet.full_text + '\n')
+    for tweet in tweepy.Cursor(api.search, q=key_word, count=100,tweet_mode='extended').items(3):
+        tweet_list.append(tweet.text + '\n')
     
     fname = r"'"+ directory_pass + "'"
     fname = fname.replace("'","")
